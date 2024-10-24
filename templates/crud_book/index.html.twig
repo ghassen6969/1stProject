@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+<table>
+    <tr><td>id</td><td>title</td><td>author name</td></tr>
+    <tr {% for book in books %}>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author.name }}</td>
+    </tr {% endfor %}>
+</table>
+</body>
+</html><html>
+         <head></head>
+           <body>
+
+           <h1>Add a new Book</h1>
+
+             <table>
+               <tr>
+                 <td>Title</td>
+
+               </tr>
+               <tr>
+                 <td>Pages number</td>
+
+               </tr>
+               <tr>
+                 <td>Author Name</td>
+
+               </tr>
+             </table>
+
+           </body>
+       </html>

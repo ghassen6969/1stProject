@@ -1,0 +1,12 @@
+<html>
+    <head></head>
+    <body>
+        <table>
+            <tr>id</tr><tr>name</tr>
+            <tr {% for author in list %}>
+                <td>{{ author.id }}</td>
+                <td>{{ author.name }}</td>
+            </tr {% endfor %}>
+        </table>
+    </body>
+</html>

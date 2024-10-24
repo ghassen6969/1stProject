@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>List Authors</title>
+
+    </head>
+    <body>
+    {% set total_books= 0 %}
+    {% if list is defined and list is not empty %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Nbr books</th>
+            </tr>
+            <tr {% for author in list %}>
+                {% set total_books=total_books +author.nbrBooks %}
+                <td>{{ author.authorName|upper }}</td>
+                <td><img src="{{ asset(author.picture) }}"></td>
+                <td>{{ author.nbrBooks }}</td>
+
+            </tr {% endfor %}>
+
+        </table>
+        <h1>the nbr of authors: {{ list|length }}, the nbr of bookds: {{ total_books }}</h1>
+
+   {% else %}
+    <h1>This table is not defined or empty</h1>
+   {% endif %}
+    </body>
+</html>
